@@ -1,16 +1,18 @@
 #include "labyrinthe.h"
 
-Case to_case(char c) {
-	Case ca; ca.type = (typeCase) c;
-	return ca;
-}
 
+/** @brief Lit un fichier .txt pour initialiser le labyrinthe
+*	@param [in] path Chemin du fichier .txt qui décrit le labyrinthe
+*	@param [out] laby Labyrinthe à initialiser
+*/
 void initialiser(char* path, Laby& laby) {
 	std::ifstream labyFic;
 	labyFic.open(path);
 
-	unsigned int nbC; labyFic >> nbC;
-	unsigned int nbL; labyFic >> nbL;
+	unsigned int nbC; // nombre de colonnes
+	labyFic >> nbC;
+	unsigned int nbL; // nombre de lignes
+	labyFic >> nbL;
 
 	for (unsigned int f = 0; f < laby.NBFACE; f++) {
 		initialiser(nbL, nbC, laby.faces[f]);
@@ -21,16 +23,21 @@ void initialiser(char* path, Laby& laby) {
 			labyFic >> ligne;
 
 			for (unsigned int c = 0; c < nbC; c++) {
-				Case ca = to_case(ligne[c]);
+				Case ca = char_to_case(ligne[c]);
 				write(ca, l, c, laby.faces[f]);
 			}
 		}
 	}
+
+	labyFic.close();
 }
 
-void afficher(Laby& laby) {
-	unsigned int& nbC = laby.faces[0].nbC;
-	unsigned int& nbL = laby.faces[0].nbL;
+/** @brief Affiche un labyrinthe
+*	@param [in] laby Labyrinthe à afficher
+*/
+void afficher(const Laby& laby) {
+	unsigned int nbC = laby.faces[0].nbC;
+	unsigned int nbL = laby.faces[0].nbL;
 
 	std::cout << nbC << " " << nbL << "\n";
 
@@ -46,6 +53,9 @@ void afficher(Laby& laby) {
 	}
 }
 
+/** @brief Désalloue les tableaux représentant les faces d'un labyrinthe
+*	@param [out] laby Labyrinthe à détruire
+*/
 void detruire(Laby& laby) {
 	for (unsigned int f = 0; f < laby.NBFACE; f++) {
 		detruire(laby.faces[f]);

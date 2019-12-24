@@ -14,5 +14,5 @@ struct Laby {
 };
 
 void initialiser(char* path, Laby& laby);
-void afficher(Laby& laby);
+void afficher(const Laby& laby);
 void detruire(Laby& laby);
