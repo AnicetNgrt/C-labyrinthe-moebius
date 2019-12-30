@@ -77,7 +77,6 @@ void MissionDragon() {
 
 	if (read_case(courant, laby).type == PLAN) {
 		afficher(laby);
-		std::cout << "\n";
 		afficher(chemin);
 	}
 	else {

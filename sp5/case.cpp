@@ -18,7 +18,7 @@ char* string(const Case& c, bool mecontent) {
 	str = new char[2];
 	str[0] = (char) c.type;
 	//if (c.visite) str[0] = 'V';
-	if (c.dans_chemin) str[0] = 'C';
+	if (c.dans_chemin || c.type == DRAGON) str[0] = 'C';
 	if (mecontent && c.type != PLAN) str[0] = '#';
 	if (mecontent && c.type == PLAN) str[0] = 'P';
 	str[1] = '\0';
