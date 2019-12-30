@@ -3,14 +3,11 @@
 #define PILE_PAS 1
 
 /**
- *	@brief Parcours du labyrinthe par le dragon
- *	@param [] ? : ???
- */
-
-/*
-
+ *	@brief Met à jour la pile contenant les coordonnées du chemin du dragon
+ *	@param [in] chemin : chemin déjà parcouru
+ *	@param [in] nouv_crd : nouvelle coordonnée à empiler
+ *	@param [in] laby : le labyrinthe
 */
-
 void maj_chemin(Pile& chemin, Vec3& nouv_crd, Laby& laby) {
 	while (!est_vide(chemin) && !est_connexe(nouv_crd, sommet(chemin), laby)) {
 		Case* ca = get_case(sommet(chemin), laby);
@@ -22,7 +19,9 @@ void maj_chemin(Pile& chemin, Vec3& nouv_crd, Laby& laby) {
 	empiler(nouv_crd, chemin);
 }
 
-
+/**
+ *	@brief Parcours du labyrinthe par le dragon
+ */
 void MissionDragon() {
 	Laby laby;
 	Pile suivantes;

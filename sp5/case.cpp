@@ -1,14 +1,16 @@
 #include "case.h"
 
-/** @brief Renvoie vrai ssi le type de case d'entrée est vaide.
+/**
+ *	@brief Renvoie vrai ssi le type de case d'entrée est vaide.
  *	@param [in] tc Type de case à vérifier
  */
 bool est_valide(const typeCase tc) {
 	return tc == MUR || tc == CHEMIN || tc == DRAGON || tc == PLAN;
 }
 
-/** @brief Convertis une Case en chaîne de caractères
- *	@param [in] c Case à convertir
+/**
+ *	@brief Convertit une Case en chaîne de caractères
+ *	@param [in] c : Case à convertir
  *	@return Chaîne de caractères issue de la conversion
  */
 char* string(const Case& c, bool mecontent) {
@@ -23,7 +25,8 @@ char* string(const Case& c, bool mecontent) {
 	return str;
 }
 
-/** @brief Convertit un char en Case
+/**
+ *	@brief Convertit un char en Case
  *	@param [in] c : Case à convertir
  *	@param [in] crd : Coordonnées 3D de la case
  *	@return Chaîne de caractères issue de la conversion
@@ -41,6 +44,10 @@ Case initialiser(char c, Vec3 crd) {
 	return ca;
 }
 
+/**
+ *	@brief Affiche les coordonnées d'une Case
+ *	@param [in] c : Case dont on souhaite afficher les coordonnées
+ */
 void afficher_crd(const Case& c) {
 	afficher(c.crd);
 }

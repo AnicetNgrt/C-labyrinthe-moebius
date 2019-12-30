@@ -79,6 +79,10 @@ bool est_vide(const Pile& pile) {
 	return pile.nbEl == 0;
 }
 
+/**
+ *	@brief Affichage des coordonnées du chemin selon la mise en forme prévue
+ * @param [in] pile : la pile contenant les coordonnées
+ */
 void afficher(const Pile& pile) {
 	for (unsigned int i = pile.nbEl; i > 0; i--) {
 		std::cout << "C";
