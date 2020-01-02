@@ -39,6 +39,7 @@ void initialiser(char* path, Laby& laby) {
 /**
  *	@brief Affiche un labyrinthe
  *	@param [in] laby : Labyrinthe à afficher
+ *	@param mecontent : affiche le mécontentement du dragon si true (false si non renseigné)
  */
 void afficher(const Laby& laby, bool mecontent) {
 	int nbC = laby.faces[0].nbC;
