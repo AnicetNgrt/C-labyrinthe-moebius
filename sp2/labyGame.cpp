@@ -4,13 +4,7 @@
 
 /**
  *	@brief Parcours du labyrinthe par le dragon
- *	@param [] ? : ???
  */
-
-/*
-
-*/
-
 void MissionDragon() {
 	Laby laby;
 	Pile pile;

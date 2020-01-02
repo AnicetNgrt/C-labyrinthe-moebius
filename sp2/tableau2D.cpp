@@ -1,9 +1,11 @@
 #include "tableau2D.h"
 
-/** @brief Initialise un tableau 2D
- *  @param [in] nbL Nombre de lignes du tableau
+/**
+ *	@brief Initialise un tableau 2D
+ *	@param [in] nbL Nombre de lignes du tableau
  *	@param [in] nbC Nombre de colonnes du tableau
  *	@param [out] t Tableau 2D à initialiser
+ *	@pre Nombre de colonnes et nombre de lignes supérieurs ou égaux à 0
  */
 void initialiser(int nbL, int nbC, Tab2& t) {
 	assert(nbL >= 0 && nbC >= 0);
