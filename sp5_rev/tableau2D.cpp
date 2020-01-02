@@ -2,9 +2,9 @@
 
 /**
  *	@brief Initialise un tableau 2D
- *	@param [in] nbL Nombre de lignes du tableau
- *	@param [in] nbC Nombre de colonnes du tableau
- *	@param [out] t Tableau 2D à initialiser
+ *	@param [in] nbL : nombre de lignes du tableau
+ *	@param [in] nbC : nombre de colonnes du tableau
+ *	@param [out] t : tableau 2D à initialiser
  */
 void initialiser(int nbL, int nbC, Tab2& t) {
 	assert(nbL >= 0 && nbC >= 0);
@@ -26,10 +26,10 @@ void initialiser(int nbL, int nbC, Tab2& t) {
 
 /**
  *	@brief Remplir une case du tableau avec un Item.
- *	@param [in] it : Item à mettre dans la case
- *	@param [in] l : N° de ligne de l'emplacement de la case à remplir
- *	@param [in] c : N° de colonne de l'emplacement de la case à remplir
- *	@param [out] t : Tableau 2D à écrire
+ *	@param [in] it : item à mettre dans la case
+ *	@param [in] l : n° de ligne de l'emplacement de la case à remplir
+ *	@param [in] c : n° de colonne de l'emplacement de la case à remplir
+ *	@param [out] t : tableau 2D à écrire
  *	@pre N° de Ligne et de colonne positifs et compris dans le tableau.
 */
 void write(Item it, int l, int c, Tab2& t) {

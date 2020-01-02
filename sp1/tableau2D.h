@@ -1,4 +1,3 @@
-#pragma once
 #include "item.h"
 
 struct Tab2 {

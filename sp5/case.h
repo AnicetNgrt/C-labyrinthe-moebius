@@ -1,4 +1,3 @@
-#pragma once
 #include "vecteur3D.h"
 
 enum typeCase { MUR = '#', CHEMIN = '+', DRAGON = 'D', PLAN = 'P' };

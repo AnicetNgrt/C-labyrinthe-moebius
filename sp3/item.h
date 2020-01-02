@@ -1,4 +1,3 @@
-#pragma once
 #include "case.h"
 
 typedef Case Item;

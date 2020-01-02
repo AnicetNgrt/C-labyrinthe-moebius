@@ -37,7 +37,7 @@ void empiler(const Vec3& it, Pile& pile) {
 
 /**
  * @brief Dépiler l'item au sommet de pile
- * @param [in, out] pile : la pile
+ * @param [in,out] pile : la pile
  * @pre la pile n'est pas vide
  */
 void depiler(Pile& pile) {
@@ -60,8 +60,7 @@ Vec3 sommet(const Pile& pile) {
  * @brief Désallouer une pile
  * @see initialiser, la pile a déjà été initialisée
  * @param [out] pile : la pile à désallouer
- * @
-*/
+ */
 void detruire(Pile& pile) {
 	delete[] pile.tab;
 	pile.tab = NULL;
@@ -73,7 +72,7 @@ void detruire(Pile& pile) {
 /**
  * @brief Test de pile vide
  * @param [in] pile : la pile
- * return true si p est vide, false sinon
+ * @return true si p est vide, false sinon
  */
 bool est_vide(const Pile& pile) {
 	return pile.nbEl == 0;
@@ -81,7 +80,7 @@ bool est_vide(const Pile& pile) {
 
 /**
  *	@brief Affichage des coordonnées du chemin selon la mise en forme prévue
- * @param [in] pile : la pile contenant les coordonnées
+ *	@param [in] pile : la pile contenant les coordonnées
  */
 void afficher(const Pile& pile) {
 	for (unsigned int i = pile.nbEl; i > 0; i--) {
