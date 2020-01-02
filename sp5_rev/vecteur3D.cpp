@@ -46,7 +46,12 @@ bool egal(const Vec3& v1, const Vec3& v2) {
 	return x_egal && y_egal && z_egal;
 }
 
-
+/**
+ *	@brief Inversion des ordonnées au changement de face
+ *	@param [in] v ; vecteur 3D
+ *	@param [in] max_y : coordonnée maximale d'ordonnée
+ *	@return retour : vecteur avec coordonnée y inversée
+ */
 Vec3 inv_y(const Vec3& v, const int max_y) {
 	Vec3 retour;
 	retour.x = v.x;
