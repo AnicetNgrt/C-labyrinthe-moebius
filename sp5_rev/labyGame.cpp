@@ -8,30 +8,15 @@
  *	@param [in] nouv_crd : nouvelle coordonnée à empiler
  *	@param [in] laby : le labyrinthe
 */
-void maj_chemin(Pile& chemin, Pile& chemin_fix, Vec3& nouv_crd, Laby& laby) {
-	static Vec3 last = nouv_crd;
-	static bool inv_mode = false;
+void maj_chemin(Pile& chemin, Vec3& nouv_crd, Laby& laby) {
 	while (!est_vide(chemin) && !est_connexe(nouv_crd, sommet(chemin), laby)) {
 		Case* ca = get_case(sommet(chemin), laby);
 		ca->dans_chemin = false;
 		depiler(chemin);
-		depiler(chemin_fix);
 	}
 	Case* ca = get_case(nouv_crd, laby);
 	ca->dans_chemin = true;
 	empiler(nouv_crd, chemin);
-
-	if (last.z == 0 && last.x == laby.faces[0].nbC-1 && nouv_crd.x == 0 && nouv_crd.z == 1) {
-		inv_mode = true;
-	}
-	else if (last.z == 1 && last.x == 0 && nouv_crd.x == laby.faces[0].nbC - 1 && nouv_crd.z == 0) {
-		inv_mode = true;
-	}
-
-	if (inv_mode) empiler(inv_y(nouv_crd, laby.faces[0].nbL), chemin_fix);
-	if (!inv_mode) empiler(nouv_crd, chemin_fix);
-
-	last = nouv_crd;
 }
 
 /**
@@ -41,7 +26,6 @@ void MissionDragon() {
 	Laby laby;
 	Pile suivantes;
 	Pile chemin;
-	Pile chemin_fix;
 	char path[] = "inMedium.txt";
 	bool plan_found = false;
 	unsigned int k = 0;
@@ -50,7 +34,6 @@ void MissionDragon() {
 	initialiser(path, laby);
 	initialiser(PILE_CAP, PILE_PAS, suivantes);
 	initialiser(PILE_CAP, PILE_PAS, chemin);
-	initialiser(PILE_CAP, PILE_PAS, chemin_fix);
 	empiler(laby.crd_dragon, suivantes);
 
 	while (!plan_found && !est_vide(suivantes)) {
@@ -59,7 +42,7 @@ void MissionDragon() {
 		depiler(suivantes);
 
 		if (!ca->visite) {
-			maj_chemin(chemin, chemin_fix, courant, laby);
+			maj_chemin(chemin, courant, laby);
 		}
 
 		if (read_case(courant, laby).type != PLAN) {
