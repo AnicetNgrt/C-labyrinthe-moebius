@@ -3,8 +3,8 @@
 
 /**
  *	@brief Lit un fichier .txt pour initialiser le labyrinthe
- *	@param [in] path : Chemin du fichier .txt qui décrit le labyrinthe
- *	@param [out] laby : Labyrinthe à initialiser
+ *	@param [in] path : Chemin du fichier .txt qui dÃ©crit le labyrinthe
+ *	@param [out] laby : Labyrinthe Ã  initialiser
  */
 void initialiser(char* path, Laby& laby) {
 	std::ifstream labyFic;
@@ -38,8 +38,8 @@ void initialiser(char* path, Laby& laby) {
 
 /**
  *	@brief Affiche un labyrinthe
- *	@param [in] laby : Labyrinthe à afficher
- *	@param mecontent : affiche le mécontentement du dragon si true (false si non renseigné)
+ *	@param [in] laby : Labyrinthe Ã  afficher
+ *	@param mecontent : affiche le mÃ©contentement du dragon si true (false si non renseignÃ©)
  */
 void afficher(const Laby& laby, bool mecontent) {
 	int nbC = laby.faces[0].nbC;
@@ -60,8 +60,8 @@ void afficher(const Laby& laby, bool mecontent) {
 }
 
 /**
- *	@brief Désalloue les tableaux représentant les faces d'un labyrinthe
- *	@param [out] laby Labyrinthe à détruire
+ *	@brief DÃ©salloue les tableaux reprÃ©sentant les faces d'un labyrinthe
+ *	@param [out] laby Labyrinthe Ã  dÃ©truire
  */
 void detruire(Laby& laby) {
 	for (int f = 0; f < laby.NBFACE; f++) {
@@ -71,7 +71,7 @@ void detruire(Laby& laby) {
 
 /**
  *	@brief Trouver une case
- *	@param [in] crd : coordonnées d'une case
+ *	@param [in] crd : coordonnÃ©es d'une case
  *	@param [in] laby : le labyrinthe
  *	@return 
  */
@@ -82,7 +82,7 @@ Case* get_case(const Vec3& crd, Laby& laby) {
 
 /**
  *	@brief Lire une case
- *	@param [in] crd : coordonnées d'une case
+ *	@param [in] crd : coordonnÃ©es d'une case
  *	@param [in] laby : le labyrinthe
  *	@return 
  */
@@ -94,7 +94,7 @@ Case read_case(const Vec3& crd, const Laby& laby) {
 
 /**
  *	@brief Test d'existence d'une case
- *	@param [in] crd : coordonnées d'une case
+ *	@param [in] crd : coordonnÃ©es d'une case
  *	@param [in] laby : le labyrinthe
  *	@return false ou true selon l'existence ou non de la case
  */
@@ -108,12 +108,12 @@ bool est_case(const Vec3& crd, const Laby& laby) {
 }
 
 /**
- *	@brief Translation vectorielle pour stocker les deux faces en un seul tableau
- *	@param [in] depart : coordonnées de départ
- *	@param [] translation : translation à réaliser
+ *	@brief Translation vectorielle selon les contraintes d'un ruban de Moebius (inversions en Y aux bordures etc...)
+ *	@param [in] depart : coordonnÃ©es de dÃ©part
+ *	@param [] translation : translation Ã  rÃ©aliser
  *	@param [in] laby : le labyrinthe
- *	@return nouv : le nouveau vecteur
- *	@pre Le nombre de lignes d'une face est supérieur à nouv.y
+ *	@return nouv : le nouveau vecteur issu de la translation
+ *	@pre Le nombre de lignes d'une face est supÃ©rieur Ã  nouv.y
  */
 Vec3 translation_moebius(const Vec3& depart, const Vec3& translation, const Laby& laby) {
 	Vec3 nouv;
@@ -147,10 +147,10 @@ Vec3 translation_moebius(const Vec3& depart, const Vec3& translation, const Laby
 }
 
 /**
- *	@brief Rapporte les coordonnées à un labyrinthe d'une seule face
- *	@param [in] crd : la coordonnée d'entrée
+ *	@brief Rapporte les coordonnÃ©es Ã  un labyrinthe d'une seule face
+ *	@param [in] crd : la coordonnÃ©e d'entrÃ©e
  *	@param [in] laby : le labyrinthe
- *	@return nouv : nouvelle coordonnée
+ *	@return nouv : nouvelle coordonnÃ©e
  */
 Vec3 crd_face_unique(const Vec3& crd, const Laby& laby) {
 	assert(crd.z < Laby::NBFACE);
@@ -170,18 +170,18 @@ Vec3 crd_face_unique(const Vec3& crd, const Laby& laby) {
 }
 
 /**
- *	@brief Vérifie si une case est à visiter ou non
- *	@param [in] depart : première case
- *	@param [in] arrivee : deuxième case
+ *	@brief VÃ©rifie si une case est Ã  visiter ou non
+ *	@param [in] depart : premiÃ¨re case
+ *	@param [in] arrivee : deuxiÃ¨me case
  *	@param [in] laby : le labyrinthe
- *	@return true ou false selon que la case soit à visiter ou non
+ *	@return true ou false selon que la case soit Ã  visiter ou non
  */
 bool est_a_visiter(const Vec3& depart, const Vec3& arrivee, const Laby& laby) {
 	assert(est_case(depart, laby) && est_case(arrivee, laby));
 	
 	bool est_visitee;
 
-	// vérifions si elle est visitée
+	// vÃ©rifions si elle est visitÃ©e
 	Case c_arrivee = read_case(arrivee, laby);
 	est_visitee = c_arrivee.visite;
 
@@ -189,9 +189,9 @@ bool est_a_visiter(const Vec3& depart, const Vec3& arrivee, const Laby& laby) {
 }
 
 /**
- *	@brief Vérifie si une case est connexe à une autre (si on peut passer de l'une à l'autre)
- *	@param [in] depart : première case
- *	@param [in] arrivee : deuxième case
+ *	@brief VÃ©rifie si une case est connexe Ã  une autre (si on peut passer de l'une Ã  l'autre)
+ *	@param [in] depart : premiÃ¨re case
+ *	@param [in] arrivee : deuxiÃ¨me case
  *	@param [in] laby : le labyrinthe
  *	@return true ou false selon que les deux cases soient connexes ou non
  */
@@ -201,11 +201,11 @@ bool est_connexe(const Vec3& depart, const Vec3& arrivee, const Laby& laby) {
 	bool est_acote = false;
 	bool est_chemin;
 	
-	// vérifions si c'est un chemin
+	// vÃ©rifions si c'est un chemin
 	Case c_arrivee = read_case(arrivee, laby);
 	est_chemin = c_arrivee.type == CHEMIN || c_arrivee.type == PLAN;
 
-	// vérifions si c'est à côté du départ
+	// vÃ©rifions si c'est Ã  cÃ´tÃ© du dÃ©part
 	for (int i = 0; i < NBDEPL; ++i) {
 		Vec3 translation = from_list(DEPL[i]);
 		Vec3 translate = translation_moebius(depart, translation, laby);
