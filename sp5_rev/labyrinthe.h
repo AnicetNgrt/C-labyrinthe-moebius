@@ -76,14 +76,6 @@ bool est_case(const Vec3& crd, const Laby& laby);
  */
 Vec3 translation_moebius(const Vec3& v1, const Vec3& v2, const Laby& laby);
 
-/**
- *	@brief Vérifie si une case est à visiter ou non
- *	@param [in] depart Première case
- *	@param [in] arrivee Deuxième case
- *	@param [in] laby Le labyrinthe
- *	@return true ou false selon que la case soit à visiter ou non
- */
-
  /**
  *	@brief Rapporte les coordonnées à un labyrinthe d'une seule face
  *	@param [in] crd La coordonnée d'entrée
