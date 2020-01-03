@@ -80,24 +80,6 @@ const Item read(const Tab2& t, int l, int c) {
 	return t.mat[l][c];
 }
 
-/**
- *	@brief Désalloue et rend NULL un tableau 2D
- *	@param [in-out] t Tableau 2D à désallouer
- */
-void detruire(Tab2& t) {
-	for (int l = 0; l < t.nbL; l++) {
-		delete [] t.mat[l];
-		t.mat[l] = NULL; 
-		delete [] t.used[l];
-		t.used[l] = NULL;
-	}
-
-	delete[] t.mat;
-	t.mat = NULL;
-	delete[] t.used;
-	t.used = NULL;
-}
-
 /** 
  * @brief Affiche un tableau 2D et son contenu initialisé
  * @param [in] t Tableau 2D à afficher
@@ -116,4 +98,22 @@ void afficher(const Tab2& t) {
 		if (l < t.nbL - 1) std::cout << ",\n\n";
 	}
 	std::cout << "\n}\n	";
+}
+
+/**
+ *	@brief Désalloue et rend NULL un tableau 2D
+ *	@param [in-out] t Tableau 2D à désallouer
+ */
+void detruire(Tab2& t) {
+	for (int l = 0; l < t.nbL; l++) {
+		delete [] t.mat[l];
+		t.mat[l] = NULL; 
+		delete [] t.used[l];
+		t.used[l] = NULL;
+	}
+
+	delete[] t.mat;
+	t.mat = NULL;
+	delete[] t.used;
+	t.used = NULL;
 }

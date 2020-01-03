@@ -22,12 +22,90 @@ struct Laby {
 	Vec3 crd_dragon;
 };
 
+/**
+ *	@brief Lit un fichier .txt pour initialiser le labyrinthe
+ *	@param [in] path : Chemin du fichier .txt qui décrit le labyrinthe
+ *	@param [out] laby : Labyrinthe à initialiser
+ */
 void initialiser(char* path, Laby& laby);
+
+/**
+ *	@brief Affiche un labyrinthe
+ *	@param [in] laby : Labyrinthe à afficher
+ *	@param mecontent : affiche le mécontentement du dragon si true (false si non renseigné)
+ */
 void afficher(const Laby& laby, bool mecontent = false);
+
+/**
+ *	@brief Désalloue les tableaux représentant les faces d'un labyrinthe
+ *	@param [out] laby Labyrinthe à détruire
+ */
 void detruire(Laby& laby);
+
+/**
+ *	@brief Trouver une case
+ *	@param [in] crd : coordonnées d'une case
+ *	@param [in] laby : le labyrinthe
+ *	@return 
+ */
 Case* get_case(const Vec3& crd, Laby& laby);
+
+/**
+ *	@brief Lire une case
+ *	@param [in] crd : coordonnées d'une case
+ *	@param [in] laby : le labyrinthe
+ *	@return 
+ */
 Case read_case(const Vec3& crd, const Laby& laby);
+
+/**
+ *	@brief Test d'existence d'une case
+ *	@param [in] crd : coordonnées d'une case
+ *	@param [in] laby : le labyrinthe
+ *	@return false ou true selon l'existence ou non de la case
+ */
 bool est_case(const Vec3& crd, const Laby& laby);
+
+/**
+ *	@brief Translation vectorielle selon les contraintes d'un ruban de Moebius (inversions en Y aux bordures etc...)
+ *	@param [in] depart : coordonnées de départ
+ *	@param [] translation : translation à réaliser
+ *	@param [in] laby : le labyrinthe
+ *	@return nouv : le nouveau vecteur issu de la translation
+ *	@pre Le nombre de lignes d'une face est supérieur à nouv.y
+ */
 Vec3 translation_moebius(const Vec3& v1, const Vec3& v2, const Laby& laby);
-bool est_connexe(const Vec3& c1, const Vec3& c2, const Laby& laby);
+
+/**
+ *	@brief Vérifie si une case est à visiter ou non
+ *	@param [in] depart : première case
+ *	@param [in] arrivee : deuxième case
+ *	@param [in] laby : le labyrinthe
+ *	@return true ou false selon que la case soit à visiter ou non
+ */
+
+ /**
+ *	@brief Rapporte les coordonnées à un labyrinthe d'une seule face
+ *	@param [in] crd : la coordonnée d'entrée
+ *	@param [in] laby : le labyrinthe
+ *	@return nouv : nouvelle coordonnée
+ */
+Vec3 crd_face_unique(const Vec3& crd, const Laby& laby);
+
+/**
+ *	@brief Vérifie si une case est à visiter ou non
+ *	@param [in] depart : première case
+ *	@param [in] arrivee : deuxième case
+ *	@param [in] laby : le labyrinthe
+ *	@return true ou false selon que la case soit à visiter ou non
+ */
 bool est_a_visiter(const Vec3& c1, const Vec3& c2, const Laby& laby);
+
+/**
+ *	@brief Vérifie si une case est connexe à une autre (si on peut passer de l'une à l'autre)
+ *	@param [in] depart : première case
+ *	@param [in] arrivee : deuxième case
+ *	@param [in] laby : le labyrinthe
+ *	@return true ou false selon que les deux cases soient connexes ou non
+ */
+bool est_connexe(const Vec3& c1, const Vec3& c2, const Laby& laby);

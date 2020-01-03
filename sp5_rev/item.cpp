@@ -1,5 +1,5 @@
 /**
- * @file Item
+ * @file item.cpp
  * Projet DesprésGr109NougaretGr109
  * @author Antoine Després, Anicet Nougaret
  * @version 1 06/01/20
