@@ -1,0 +1,90 @@
+\hypertarget{laby_game_8cpp}{}\doxysection{C\+:/\+Users/mr003/\+Documents/programmation/labyrinthe-\/moebius/sp5\+\_\+rev/laby\+Game.cpp File Reference}
+\label{laby_game_8cpp}\index{C:/Users/mr003/Documents/programmation/labyrinthe-\/moebius/sp5\_rev/labyGame.cpp@{C:/Users/mr003/Documents/programmation/labyrinthe-\/moebius/sp5\_rev/labyGame.cpp}}
+
+
+Composant Laby\+Game Structures de données et algorithmes.  
+
+
+{\ttfamily \#include \char`\"{}laby\+Game.\+h\char`\"{}}\newline
+Include dependency graph for laby\+Game.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{laby_game_8cpp_a546f83178846a221367cb402763c2c11}{P\+I\+L\+E\+\_\+\+C\+AP}}~10
+\item 
+\#define \mbox{\hyperlink{laby_game_8cpp_a45a82ef6ea9b70fcb057e45febdc0237}{P\+I\+L\+E\+\_\+\+P\+AS}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{laby_game_8cpp_adec24760babd442c43aace3b514d7a5d}{maj\+\_\+chemin}} (\mbox{\hyperlink{struct_pile}{Pile}} \&chemin, \mbox{\hyperlink{struct_vec3}{Vec3}} \&nouv\+\_\+crd, \mbox{\hyperlink{struct_laby}{Laby}} \&laby)
+\begin{DoxyCompactList}\small\item\em Met à jour la pile contenant les coordonnées du chemin du dragon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{laby_game_8cpp_aaf229a2ed61a835a28258b1a8e588be5}{Mission\+Dragon}} ()
+\begin{DoxyCompactList}\small\item\em Parcours du labyrinthe par le dragon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Composant Laby\+Game Structures de données et algorithmes. 
+
+Projet Després\+Gr109\+Nougaret\+Gr109 \begin{DoxyAuthor}{Author}
+Antoine Després, Anicet Nougaret 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 06/01/20 
+\end{DoxyVersion}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{laby_game_8cpp_a546f83178846a221367cb402763c2c11}\label{laby_game_8cpp_a546f83178846a221367cb402763c2c11}} 
+\index{labyGame.cpp@{labyGame.cpp}!PILE\_CAP@{PILE\_CAP}}
+\index{PILE\_CAP@{PILE\_CAP}!labyGame.cpp@{labyGame.cpp}}
+\doxysubsubsection{\texorpdfstring{PILE\_CAP}{PILE\_CAP}}
+{\footnotesize\ttfamily \#define P\+I\+L\+E\+\_\+\+C\+AP~10}
+
+\mbox{\Hypertarget{laby_game_8cpp_a45a82ef6ea9b70fcb057e45febdc0237}\label{laby_game_8cpp_a45a82ef6ea9b70fcb057e45febdc0237}} 
+\index{labyGame.cpp@{labyGame.cpp}!PILE\_PAS@{PILE\_PAS}}
+\index{PILE\_PAS@{PILE\_PAS}!labyGame.cpp@{labyGame.cpp}}
+\doxysubsubsection{\texorpdfstring{PILE\_PAS}{PILE\_PAS}}
+{\footnotesize\ttfamily \#define P\+I\+L\+E\+\_\+\+P\+AS~1}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{laby_game_8cpp_adec24760babd442c43aace3b514d7a5d}\label{laby_game_8cpp_adec24760babd442c43aace3b514d7a5d}} 
+\index{labyGame.cpp@{labyGame.cpp}!maj\_chemin@{maj\_chemin}}
+\index{maj\_chemin@{maj\_chemin}!labyGame.cpp@{labyGame.cpp}}
+\doxysubsubsection{\texorpdfstring{maj\_chemin()}{maj\_chemin()}}
+{\footnotesize\ttfamily void maj\+\_\+chemin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pile}{Pile}} \&}]{chemin,  }\item[{\mbox{\hyperlink{struct_vec3}{Vec3}} \&}]{nouv\+\_\+crd,  }\item[{\mbox{\hyperlink{struct_laby}{Laby}} \&}]{laby }\end{DoxyParamCaption})}
+
+
+
+Met à jour la pile contenant les coordonnées du chemin du dragon. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em chemin} & \+: chemin déjà parcouru \\
+\hline
+\mbox{\texttt{ in}}  & {\em nouv\+\_\+crd} & \+: nouvelle coordonnée à empiler \\
+\hline
+\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{laby_game_8cpp_aaf229a2ed61a835a28258b1a8e588be5}\label{laby_game_8cpp_aaf229a2ed61a835a28258b1a8e588be5}} 
+\index{labyGame.cpp@{labyGame.cpp}!MissionDragon@{MissionDragon}}
+\index{MissionDragon@{MissionDragon}!labyGame.cpp@{labyGame.cpp}}
+\doxysubsubsection{\texorpdfstring{MissionDragon()}{MissionDragon()}}
+{\footnotesize\ttfamily void Mission\+Dragon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Parcours du labyrinthe par le dragon. 
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
