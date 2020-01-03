@@ -1,43 +1,39 @@
-\hypertarget{pile_8h}{}\doxysection{C\+:/\+Users/mr003/\+Documents/programmation/labyrinthe-\/moebius/sp5\+\_\+rev/pile.h File Reference}
-\label{pile_8h}\index{C:/Users/mr003/Documents/programmation/labyrinthe-\/moebius/sp5\_rev/pile.h@{C:/Users/mr003/Documents/programmation/labyrinthe-\/moebius/sp5\_rev/pile.h}}
+\hypertarget{pile_8h}{}\doxysection{R√©f√©rence du fichier C\+:/\+P\+J\+\_\+\+S\+D\+A/pile.h}
+\label{pile_8h}\index{C:/PJ\_SDA/pile.h@{C:/PJ\_SDA/pile.h}}
 
 
 Composant \mbox{\hyperlink{struct_pile}{Pile}} Structures de donn√©es et algorithmes.  
 
 
 {\ttfamily \#include \char`\"{}tableau2\+D.\+h\char`\"{}}\newline
-Include dependency graph for pile.\+h\+:
-% FIG 0
-This graph shows which files directly or indirectly include this file\+:
-% FIG 1
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_pile}{Pile}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{pile_8h_a0f64868948f4ec25e25b900d78dc5b03}{initialiser}} (unsigned int n, unsigned int p, \mbox{\hyperlink{struct_pile}{Pile}} \&pile)
-\begin{DoxyCompactList}\small\item\em Initialiser une pile vide la pile est allouÈe en mÈmoire dynamique. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Initialiser une pile vide la pile est allou√©e en m√©moire dynamique. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pile_8h_acb921a706453e114e6dc663b4a5324d9}{empiler}} (const \mbox{\hyperlink{struct_vec3}{Vec3}} \&it, \mbox{\hyperlink{struct_pile}{Pile}} \&pile)
 \begin{DoxyCompactList}\small\item\em Empiler un item sur une pile. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pile_8h_a8b3b37884e20c6815951bc9408a5ee38}{depiler}} (\mbox{\hyperlink{struct_pile}{Pile}} \&pile)
-\begin{DoxyCompactList}\small\item\em DÈpiler l\textquotesingle{}item au sommet de pile. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em D√©piler l\textquotesingle{}item au sommet de pile. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{struct_vec3}{Vec3}} \mbox{\hyperlink{pile_8h_ad9035b858b225127210378e9c5234861}{sommet}} (const \mbox{\hyperlink{struct_pile}{Pile}} \&pile)
 \begin{DoxyCompactList}\small\item\em Lire l\textquotesingle{}item au sommet de la pile. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pile_8h_a2768c7cefd56136f83840228e374470b}{detruire}} (\mbox{\hyperlink{struct_pile}{Pile}} \&pile)
-\begin{DoxyCompactList}\small\item\em DÈsallouer une pile. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em D√©sallouer une pile. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{pile_8h_ae27db206e4e078b9ed06fab11258c867}{est\+\_\+vide}} (const \mbox{\hyperlink{struct_pile}{Pile}} \&pile)
 \begin{DoxyCompactList}\small\item\em Test de pile vide. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{pile_8h_ac8874fd7dfed5ba5bee5b9209157f39c}{afficher}} (const \mbox{\hyperlink{struct_pile}{Pile}} \&pile)
-\begin{DoxyCompactList}\small\item\em Affichage des coordonnÈes du chemin selon la mise en forme prÈvue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Affichage des coordonn√©es du chemin selon la mise en forme pr√©vue. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description d√©taill√©e}
 Composant \mbox{\hyperlink{struct_pile}{Pile}} Structures de donn√©es et algorithmes. 
 
-Projet Despr√©s\+Gr109\+Nougaret\+Gr109 \begin{DoxyAuthor}{Author}
+Projet Despr√©s\+Gr109\+Nougaret\+Gr109 \begin{DoxyAuthor}{Auteur}
 Antoine Despr√©s, Anicet Nougaret 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
@@ -45,7 +41,7 @@ Antoine Despr√©s, Anicet Nougaret
 \end{DoxyVersion}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentation des fonctions}
 \mbox{\Hypertarget{pile_8h_ac8874fd7dfed5ba5bee5b9209157f39c}\label{pile_8h_ac8874fd7dfed5ba5bee5b9209157f39c}} 
 \index{pile.h@{pile.h}!afficher@{afficher}}
 \index{afficher@{afficher}!pile.h@{pile.h}}
@@ -54,17 +50,20 @@ Antoine Despr√©s, Anicet Nougaret
 
 
 
-Affichage des coordonnÈes du chemin selon la mise en forme prÈvue. 
+Affichage des coordonn√©es du chemin selon la mise en forme pr√©vue. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em pile} & \+: la pile contenant les coordonnÈes \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em pile} & La pile contenant les coordonn√©es\\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
+Affichage des coordonn√©es du chemin selon la mise en forme pr√©vue.
+
+
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em pile} & La pile contenant les coordonnÈes \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{pile_8h_a8b3b37884e20c6815951bc9408a5ee38}\label{pile_8h_a8b3b37884e20c6815951bc9408a5ee38}} 
 \index{pile.h@{pile.h}!depiler@{depiler}}
 \index{depiler@{depiler}!pile.h@{pile.h}}
@@ -73,18 +72,26 @@ Here is the caller graph for this function\+:
 
 
 
-DÈpiler l\textquotesingle{}item au sommet de pile. 
+D√©piler l\textquotesingle{}item au sommet de pile. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in,out}}  & {\em pile} & \+: la pile \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in,out}}  & {\em pile} & La pile \\
 \hline
 \end{DoxyParams}
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Pr√©condition}
+la pile n\textquotesingle{}est pas vide
+\end{DoxyPrecond}
+D√©piler l\textquotesingle{}item au sommet de pile.
+
+
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in,out}}  & {\em pile} & La pile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Pr√©condition}
 la pile n\textquotesingle{}est pas vide 
 \end{DoxyPrecond}
-Here is the caller graph for this function\+:
-% FIG 4
 \mbox{\Hypertarget{pile_8h_a2768c7cefd56136f83840228e374470b}\label{pile_8h_a2768c7cefd56136f83840228e374470b}} 
 \index{pile.h@{pile.h}!detruire@{detruire}}
 \index{detruire@{detruire}!pile.h@{pile.h}}
@@ -93,14 +100,24 @@ Here is the caller graph for this function\+:
 
 
 
-DÈsallouer une pile. 
+D√©sallouer une pile. 
 
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{pile_8cpp_a0f64868948f4ec25e25b900d78dc5b03}{initialiser}}, la pile a dÈj‡ ÈtÈ initialisÈe 
+\begin{DoxySeeAlso}{Voir √©galement}
+\mbox{\hyperlink{pile_8h_a0f64868948f4ec25e25b900d78dc5b03}{initialiser}}, la pile a d√©j√† √©t√© initialis√©e 
 \end{DoxySeeAlso}
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ out}}  & {\em pile} & \+: la pile ‡ dÈsallouer \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ out}}  & {\em pile} & La pile √† d√©sallouer\\
+\hline
+\end{DoxyParams}
+D√©sallouer une pile.
+
+\begin{DoxySeeAlso}{Voir √©galement}
+\mbox{\hyperlink{pile_8h_a0f64868948f4ec25e25b900d78dc5b03}{initialiser}}, la pile a dÈj‡ ÈtÈ initialisÈe 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ out}}  & {\em pile} & La pile ‡ dÈsallouer \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{pile_8h_acb921a706453e114e6dc663b4a5324d9}\label{pile_8h_acb921a706453e114e6dc663b4a5324d9}} 
@@ -114,14 +131,16 @@ DÈsallouer une pile.
 Empiler un item sur une pile. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em it} & \+: l\textquotesingle{}item ‡ empiler \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em it} & L\textquotesingle{}item √† empiler \\
 \hline
-\mbox{\texttt{ in,out}}  & {\em pile} & \+: la pile \\
+\mbox{\texttt{ in,out}}  & {\em pile} & La pile\\
+\hline
+\mbox{\texttt{ in}}  & {\em it} & L\textquotesingle{}item ‡ empiler \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em pile} & La pile \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:
-% FIG 5
 \mbox{\Hypertarget{pile_8h_ae27db206e4e078b9ed06fab11258c867}\label{pile_8h_ae27db206e4e078b9ed06fab11258c867}} 
 \index{pile.h@{pile.h}!est\_vide@{est\_vide}}
 \index{est\_vide@{est\_vide}!pile.h@{pile.h}}
@@ -133,15 +152,13 @@ Here is the caller graph for this function\+:
 Test de pile vide. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em pile} & \+: la pile \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em pile} & La pile \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true si p est vide, false sinon 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 6
 \mbox{\Hypertarget{pile_8h_a0f64868948f4ec25e25b900d78dc5b03}\label{pile_8h_a0f64868948f4ec25e25b900d78dc5b03}} 
 \index{pile.h@{pile.h}!initialiser@{initialiser}}
 \index{initialiser@{initialiser}!pile.h@{pile.h}}
@@ -150,21 +167,38 @@ Here is the caller graph for this function\+:
 
 
 
-Initialiser une pile vide la pile est allouÈe en mÈmoire dynamique. 
+Initialiser une pile vide la pile est allou√©e en m√©moire dynamique. 
 
-\begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{pile_8cpp_a2768c7cefd56136f83840228e374470b}{detruire}} pour une dÈsallocation en fin d\textquotesingle{}utilisation 
+\begin{DoxySeeAlso}{Voir √©galement}
+\mbox{\hyperlink{pile_8h_a2768c7cefd56136f83840228e374470b}{detruire}} pour une d√©sallocation en fin d\textquotesingle{}utilisation 
 \end{DoxySeeAlso}
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em n} & \+: la capacitÈ de la pile \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em n} & La capacit√© de la pile \\
 \hline
-\mbox{\texttt{ in}}  & {\em p} & \+: le pas d\textquotesingle{}extension de la pile \\
+\mbox{\texttt{ in}}  & {\em p} & Le pas d\textquotesingle{}extension de la pile \\
 \hline
-\mbox{\texttt{ out}}  & {\em pile} & \+: la pile ‡ initialiser \\
+\mbox{\texttt{ out}}  & {\em pile} & La pile √† initialiser \\
 \hline
 \end{DoxyParams}
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Pr√©condition}
+n$>$0
+\end{DoxyPrecond}
+Initialiser une pile vide la pile est allou√©e en m√©moire dynamique.
+
+\begin{DoxySeeAlso}{Voir √©galement}
+\mbox{\hyperlink{pile_8h_a2768c7cefd56136f83840228e374470b}{detruire}} pour une dÈsallocation en fin d\textquotesingle{}utilisation 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em n} & La capacitÈ de la pile \\
+\hline
+\mbox{\texttt{ in}}  & {\em p} & Le pas d\textquotesingle{}extension de la pile \\
+\hline
+\mbox{\texttt{ out}}  & {\em pile} & La pile ‡ initialiser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Pr√©condition}
 n$>$0 
 \end{DoxyPrecond}
 \mbox{\Hypertarget{pile_8h_ad9035b858b225127210378e9c5234861}\label{pile_8h_ad9035b858b225127210378e9c5234861}} 
@@ -178,15 +212,13 @@ n$>$0
 Lire l\textquotesingle{}item au sommet de la pile. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em pile} & \+: la pile \\
+\begin{DoxyParams}[1]{Param√®tres}
+\mbox{\texttt{ in}}  & {\em pile} & La pile \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 la valeur de l\textquotesingle{}item au sommet de la pile 
 \end{DoxyReturn}
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Pr√©condition}
 la pile n\textquotesingle{}est pas vide 
 \end{DoxyPrecond}
-Here is the caller graph for this function\+:
-% FIG 7

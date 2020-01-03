@@ -11,9 +11,9 @@
 
 /**
  *	@brief Met à jour la pile contenant les coordonnées du chemin du dragon
- *	@param [in] chemin : chemin déjà parcouru
- *	@param [in] nouv_crd : nouvelle coordonnée à empiler
- *	@param [in] laby : le labyrinthe
+ *	@param [in] chemin Chemin déjà parcouru
+ *	@param [in] nouv_crd Nouvelle coordonnée à empiler
+ *	@param [in] laby Le labyrinthe
 */
 void maj_chemin(Pile& chemin, Vec3& nouv_crd, Laby& laby);
 

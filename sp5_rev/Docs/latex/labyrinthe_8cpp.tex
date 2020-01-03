@@ -1,14 +1,12 @@
-\hypertarget{labyrinthe_8cpp}{}\doxysection{C\+:/\+Users/mr003/\+Documents/programmation/labyrinthe-\/moebius/sp5\+\_\+rev/labyrinthe.cpp File Reference}
-\label{labyrinthe_8cpp}\index{C:/Users/mr003/Documents/programmation/labyrinthe-\/moebius/sp5\_rev/labyrinthe.cpp@{C:/Users/mr003/Documents/programmation/labyrinthe-\/moebius/sp5\_rev/labyrinthe.cpp}}
+\hypertarget{labyrinthe_8cpp}{}\doxysection{Référence du fichier C\+:/\+P\+J\+\_\+\+S\+D\+A/labyrinthe.cpp}
+\label{labyrinthe_8cpp}\index{C:/PJ\_SDA/labyrinthe.cpp@{C:/PJ\_SDA/labyrinthe.cpp}}
 
 
 Composant labyrinthe Structures de données et algorithmes.  
 
 
 {\ttfamily \#include \char`\"{}labyrinthe.\+h\char`\"{}}\newline
-Include dependency graph for labyrinthe.\+cpp\+:
-% FIG 0
-\doxysubsection*{Functions}
+\doxysubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{labyrinthe_8cpp_a01c1137f006923127d77b9c7286c0eb6}{initialiser}} (char $\ast$path, \mbox{\hyperlink{struct_laby}{Laby}} \&laby)
@@ -33,10 +31,10 @@ bool \mbox{\hyperlink{labyrinthe_8cpp_a6ddcad44d85059082874d9a81129113c}{est\+\_
 \begin{DoxyCompactList}\small\item\em Vérifie si une case est connexe à une autre (si on peut passer de l\textquotesingle{}une à l\textquotesingle{}autre) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Description détaillée}
 Composant labyrinthe Structures de données et algorithmes. 
 
-Projet Després\+Gr109\+Nougaret\+Gr109 \begin{DoxyAuthor}{Author}
+Projet Després\+Gr109\+Nougaret\+Gr109 \begin{DoxyAuthor}{Auteur}
 Antoine Després, Anicet Nougaret 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
@@ -44,7 +42,7 @@ Antoine Després, Anicet Nougaret
 \end{DoxyVersion}
 
 
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentation des fonctions}
 \mbox{\Hypertarget{labyrinthe_8cpp_a011a0d1c34d99d613d8e493cb5bd295c}\label{labyrinthe_8cpp_a011a0d1c34d99d613d8e493cb5bd295c}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!afficher@{afficher}}
 \index{afficher@{afficher}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -56,14 +54,12 @@ Antoine Després, Anicet Nougaret
 Affiche un labyrinthe. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em laby} & \+: Labyrinthe à afficher \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em laby} & Labyrinthe à afficher \\
 \hline
- & {\em mecontent} & \+: affiche le mécontentement du dragon si true (false si non renseigné) \\
+ & {\em mecontent} & Affiche le mécontentement du dragon si true (false si non renseigné) \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-% FIG 1
 \mbox{\Hypertarget{labyrinthe_8cpp_a1f927ca31fbfc97126ebcda0113f9768}\label{labyrinthe_8cpp_a1f927ca31fbfc97126ebcda0113f9768}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!crd\_face\_unique@{crd\_face\_unique}}
 \index{crd\_face\_unique@{crd\_face\_unique}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -74,15 +70,17 @@ Here is the call graph for this function\+:
 
 Rapporte les coordonnées à un labyrinthe d\textquotesingle{}une seule face. 
 
+Vérifie si une case est à visiter ou non.
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em crd} & \+: la coordonnée d\textquotesingle{}entrée \\
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em crd} & La coordonnée d\textquotesingle{}entrée \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-nouv \+: nouvelle coordonnée 
+\begin{DoxyReturn}{Renvoie}
+Nouvelle coordonnée 
 \end{DoxyReturn}
 \mbox{\Hypertarget{labyrinthe_8cpp_a325501041b11efdd99b9cb51ffd47bbc}\label{labyrinthe_8cpp_a325501041b11efdd99b9cb51ffd47bbc}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!detruire@{detruire}}
@@ -95,14 +93,10 @@ nouv \+: nouvelle coordonnée
 Désalloue les tableaux représentant les faces d\textquotesingle{}un labyrinthe. 
 
 
-\begin{DoxyParams}[1]{Parameters}
+\begin{DoxyParams}[1]{Paramètres}
 \mbox{\texttt{ out}}  & {\em laby} & Labyrinthe à détruire \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-% FIG 2
-Here is the caller graph for this function\+:
-% FIG 3
 \mbox{\Hypertarget{labyrinthe_8cpp_a9b20ebadcfc3b91b892b8a0bb31e2ba7}\label{labyrinthe_8cpp_a9b20ebadcfc3b91b892b8a0bb31e2ba7}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!est\_a\_visiter@{est\_a\_visiter}}
 \index{est\_a\_visiter@{est\_a\_visiter}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -114,21 +108,17 @@ Here is the caller graph for this function\+:
 Vérifie si une case est à visiter ou non. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em depart} & \+: première case \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em depart} & Première case \\
 \hline
-\mbox{\texttt{ in}}  & {\em arrivee} & \+: deuxième case \\
+\mbox{\texttt{ in}}  & {\em arrivee} & Deuxième case \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true ou false selon que la case soit à visiter ou non 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 4
-Here is the caller graph for this function\+:
-% FIG 5
 \mbox{\Hypertarget{labyrinthe_8cpp_a7b5f74fc1bbb1d6d4589e577b0070c5a}\label{labyrinthe_8cpp_a7b5f74fc1bbb1d6d4589e577b0070c5a}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!est\_case@{est\_case}}
 \index{est\_case@{est\_case}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -140,17 +130,15 @@ Here is the caller graph for this function\+:
 Test d\textquotesingle{}existence d\textquotesingle{}une case. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em crd} & \+: coordonnées d\textquotesingle{}une case \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em crd} & Coordonnées d\textquotesingle{}une case \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 false ou true selon l\textquotesingle{}existence ou non de la case 
 \end{DoxyReturn}
-Here is the caller graph for this function\+:
-% FIG 6
 \mbox{\Hypertarget{labyrinthe_8cpp_a6ddcad44d85059082874d9a81129113c}\label{labyrinthe_8cpp_a6ddcad44d85059082874d9a81129113c}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!est\_connexe@{est\_connexe}}
 \index{est\_connexe@{est\_connexe}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -162,21 +150,17 @@ Here is the caller graph for this function\+:
 Vérifie si une case est connexe à une autre (si on peut passer de l\textquotesingle{}une à l\textquotesingle{}autre) 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em depart} & \+: première case \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em depart} & Première case \\
 \hline
-\mbox{\texttt{ in}}  & {\em arrivee} & \+: deuxième case \\
+\mbox{\texttt{ in}}  & {\em arrivee} & Deuxième case \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 true ou false selon que les deux cases soient connexes ou non 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 7
-Here is the caller graph for this function\+:
-% FIG 8
 \mbox{\Hypertarget{labyrinthe_8cpp_af73781b0c230c862b8086f44c671f896}\label{labyrinthe_8cpp_af73781b0c230c862b8086f44c671f896}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!get\_case@{get\_case}}
 \index{get\_case@{get\_case}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -188,19 +172,15 @@ Here is the caller graph for this function\+:
 Trouver une case. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em crd} & \+: coordonnées d\textquotesingle{}une case \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em crd} & Coordonnées d\textquotesingle{}une case \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 9
-Here is the caller graph for this function\+:
-% FIG 10
 \mbox{\Hypertarget{labyrinthe_8cpp_a01c1137f006923127d77b9c7286c0eb6}\label{labyrinthe_8cpp_a01c1137f006923127d77b9c7286c0eb6}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!initialiser@{initialiser}}
 \index{initialiser@{initialiser}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -212,16 +192,12 @@ Here is the caller graph for this function\+:
 Lit un fichier .txt pour initialiser le labyrinthe. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em path} & \+: Chemin du fichier .txt qui décrit le labyrinthe \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em path} & Chemin du fichier .txt qui décrit le labyrinthe \\
 \hline
-\mbox{\texttt{ out}}  & {\em laby} & \+: Labyrinthe à initialiser \\
+\mbox{\texttt{ out}}  & {\em laby} & Labyrinthe à initialiser \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:
-% FIG 11
-Here is the caller graph for this function\+:
-% FIG 12
 \mbox{\Hypertarget{labyrinthe_8cpp_ab20235b70edf353ea87b6220f380e005}\label{labyrinthe_8cpp_ab20235b70edf353ea87b6220f380e005}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!read\_case@{read\_case}}
 \index{read\_case@{read\_case}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -233,19 +209,15 @@ Here is the caller graph for this function\+:
 Lire une case. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em crd} & \+: coordonnées d\textquotesingle{}une case \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em crd} & Coordonnées d\textquotesingle{}une case \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Renvoie}
 
 \end{DoxyReturn}
-Here is the call graph for this function\+:
-% FIG 13
-Here is the caller graph for this function\+:
-% FIG 14
 \mbox{\Hypertarget{labyrinthe_8cpp_a1d7b7bf79bf2318a91dd188981a6bd70}\label{labyrinthe_8cpp_a1d7b7bf79bf2318a91dd188981a6bd70}} 
 \index{labyrinthe.cpp@{labyrinthe.cpp}!translation\_moebius@{translation\_moebius}}
 \index{translation\_moebius@{translation\_moebius}!labyrinthe.cpp@{labyrinthe.cpp}}
@@ -257,19 +229,17 @@ Here is the caller graph for this function\+:
 Translation vectorielle selon les contraintes d\textquotesingle{}un ruban de Moebius (inversions en Y aux bordures etc...) 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em depart} & \+: coordonnées de départ \\
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\texttt{ in}}  & {\em depart} & Coordonnées de départ \\
 \hline
- & {\em \mbox{[}$\,$\mbox{]}} & translation \+: translation à réaliser \\
+ & {\em \mbox{[}$\,$\mbox{]}} & translation Translation à réaliser \\
 \hline
-\mbox{\texttt{ in}}  & {\em laby} & \+: le labyrinthe \\
+\mbox{\texttt{ in}}  & {\em laby} & Le labyrinthe \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-nouv \+: le nouveau vecteur issu de la translation 
+\begin{DoxyReturn}{Renvoie}
+nouv Le nouveau vecteur issu de la translation 
 \end{DoxyReturn}
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Précondition}
 Le nombre de lignes d\textquotesingle{}une face est supérieur à nouv.\+y 
 \end{DoxyPrecond}
-Here is the caller graph for this function\+:
-% FIG 15
