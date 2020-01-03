@@ -1,7 +1,7 @@
 #include "vecteur3D.h"
 
 /**
- *	@brief Création d'un vecteur à trois coordonnées et de ses composantes x, y et z
+ *	@brief Création d'un vecteur à trois coordonnées
  *	@param [in] x : coordonnée d'abscisse
  *	@param [in] y : coordonnée d'ordonnée
  *	@param [in] z : numéro de face
@@ -13,9 +13,9 @@ Vec3 tuple(int x, int y, int z) {
 }
 
 /**
- *	@brief Lien entre le coordonnées d'un vecteur et un tableau crd
- *	@param [in] crd : tableau contenant les coordonnées d'une case
- *	@return nouv : vecteur contenant les coordonnées
+ *	@brief Passage d'un tableau de 3 entiers à un Vecteur 3
+ *	@param [in] crd : tableau de 3 entiers
+ *	@return nouv : vecteur 3 issu de la conversion
  */
 Vec3 from_list(const int crd[3]) {
 	Vec3 nouv;
@@ -26,7 +26,7 @@ Vec3 from_list(const int crd[3]) {
 }
 
 /**
- *	@brief Affichage de la partie entre parenthèses des coordonnées de chaque case du chemin
+ *	@brief Affichage (x,y,z) d'un Vecteur 3
  *	@param [in] v : coordonnées d'une case
  */
 void afficher(const Vec3& v) {
@@ -34,7 +34,7 @@ void afficher(const Vec3& v) {
 }
 
 /**
- *	@brief Comparaison des coordonnées de deux vecteurs
+ *	@brief Test d'égalité entre deux Vecteurs 3 (ssi toutes coordonnées égales)
  *	@param [in] v1 : premier vecteur
  *	@param [in] v2 : second vecteur
  *	@return true si toutes les coordonnées sont égales, false sinon
@@ -47,9 +47,9 @@ bool egal(const Vec3& v1, const Vec3& v2) {
 }
 
 /**
- *	@brief Inversion des ordonnées au changement de face
+ *	@brief Inversion des ordonnées d'un Vecteur 3 par rapport au y_max
  *	@param [in] v ; vecteur 3D
- *	@param [in] max_y : coordonnée maximale d'ordonnée
+ *	@param [in] max_y : valeur maximale d'ordonnée
  *	@return retour : vecteur avec coordonnée y inversée
  */
 Vec3 inv_y(const Vec3& v, const int max_y) {
