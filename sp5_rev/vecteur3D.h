@@ -1,3 +1,12 @@
+/**
+ * @file vecteur3D.h
+ * Projet DesprésGr109NougaretGr109
+ * @author Antoine Després, Anicet Nougaret
+ * @version 1 06/01/20
+ * @brief Composant vecteur 3D
+ * Structures de données et algorithmes
+ */
+
 #include <iostream>
 #include <cassert>
 

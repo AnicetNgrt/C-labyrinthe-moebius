@@ -1,3 +1,12 @@
+/**
+ * @file tableau2D.cpp
+ * Projet DesprésGr109NougaretGr109
+ * @author Antoine Després, Anicet Nougaret
+ * @version 1 06/01/20
+ * @brief Composant tableau à 2 dimensions
+ * Structures de données et algorithmes
+ */
+
 #include "tableau2D.h"
 
 /**

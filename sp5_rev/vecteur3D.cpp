@@ -1,4 +1,13 @@
-#include "vecteur3D.h"
+/**
+ * @file vecteur3D.cpp
+ * Projet DesprésGr109NougaretGr109
+ * @author Antoine Després, Anicet Nougaret
+ * @version 1 06/01/20
+ * @brief Composant vecteur 3D
+ * Structures de données et algorithmes
+ */
+ #include "vecteur3D.h"
+
 
 /**
  *	@brief Création d'un vecteur à trois coordonnées
