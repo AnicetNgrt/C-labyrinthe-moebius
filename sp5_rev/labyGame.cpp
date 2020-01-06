@@ -13,7 +13,7 @@
 
 /**
  *	@brief Met à jour la pile contenant les coordonnées du chemin du dragon
- *	@param [in] chemin Chemin déjà parcouru
+ *	@param [in,out] chemin Chemin déjà parcouru
  *	@param [in] nouv_crd Nouvelle coordonnée à empiler
  *	@param [in] laby Le labyrinthe
 */

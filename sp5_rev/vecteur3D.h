@@ -40,8 +40,8 @@ void afficher(const Vec3& v);
 
 /**
  *	@brief Test d'égalité entre deux Vecteurs 3 (ssi toutes coordonnées égales)
- *	@param [in] v1 Vremier vecteur
- *	@param [in] v2 Vecond vecteur
+ *	@param [in] v1 Premier vecteur
+ *	@param [in] v2 Second vecteur
  *	@return true si toutes les coordonnées sont égales, false sinon
  */
 bool egal(const Vec3& v1, const Vec3& v2);

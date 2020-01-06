@@ -82,7 +82,7 @@ void detruire(Laby& laby) {
  *	@brief Trouver une case
  *	@param [in] crd Coordonnées d'une case
  *	@param [in] laby Le labyrinthe
- *	@return 
+ *	@return Pointeur sur la case
  */
 Case* get_case(const Vec3& crd, Laby& laby) {
 	assert(est_case(crd, laby));

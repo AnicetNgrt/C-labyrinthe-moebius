@@ -25,12 +25,12 @@ struct Tab2 {
 void initialiser(int nbL, int nbC, Tab2& t);
 
 /**
- *	@brief Remplir une case du tableau avec un Item.
+ *	@brief Remplir une case du tableau avec un Item
  *	@param [in] it Item à mettre dans la case
  *	@param [in] l N° de ligne de l'emplacement de la case à remplir
  *	@param [in] c N° de colonne de l'emplacement de la case à remplir
  *	@param [out] t Tableau 2D à écrire
- *	@pre N° de Ligne et de colonne positifs et compris dans le tableau.
+ *	@pre N° de Ligne et de colonne positifs et compris dans le tableau
 */
 void write(Item it, int l, int c, Tab2& t);
 
@@ -40,7 +40,7 @@ void write(Item it, int l, int c, Tab2& t);
  *	@param [in] l N° de ligne de l'emplacement de la case à lire
  *	@param [in] c N° de colonne de l'emplacement de la case à lire
  *	@return Item situé dans la case spécifiée
- *	@pre N° de Ligne et de colonne positifs et compris dans le tableau.
+ *	@pre N° de Ligne et de colonne positifs et compris dans le tableau
  *	@pre Case spécifiée non vide
  */
 Item* get(Tab2& t, int l, int c);

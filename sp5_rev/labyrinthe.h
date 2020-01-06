@@ -46,7 +46,7 @@ void detruire(Laby& laby);
  *	@brief Trouver une case
  *	@param [in] crd Coordonnées d'une case
  *	@param [in] laby Le labyrinthe
- *	@return 
+ *	@return Pointeur sur la case
  */
 Case* get_case(const Vec3& crd, Laby& laby);
 
@@ -54,7 +54,7 @@ Case* get_case(const Vec3& crd, Laby& laby);
  *	@brief Lire une case
  *	@param [in] crd Coordonnées d'une case
  *	@param [in] laby Le labyrinthe
- *	@return 
+ *	@return ca La case
  */
 Case read_case(const Vec3& crd, const Laby& laby);
 
