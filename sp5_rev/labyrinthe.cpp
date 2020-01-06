@@ -48,7 +48,7 @@ void initialiser(char* path, Laby& laby) {
 /**
  *	@brief Affiche un labyrinthe
  *	@param [in] laby Labyrinthe à afficher
- *	@param mecontent Affiche le mécontentement du dragon si true (false si non renseigné)
+ *	@param [in] mecontent Affiche le mécontentement du dragon si true (false par défaut)
  */
 void afficher(const Laby& laby, bool mecontent) {
 	int nbC = laby.faces[0].nbC;
@@ -93,7 +93,7 @@ Case* get_case(const Vec3& crd, Laby& laby) {
  *	@brief Lire une case
  *	@param [in] crd Coordonnées d'une case
  *	@param [in] laby Le labyrinthe
- *	@return 
+ *	@return ca la case
  */
 Case read_case(const Vec3& crd, const Laby& laby) {
 	assert(est_case(crd, laby));
@@ -105,7 +105,7 @@ Case read_case(const Vec3& crd, const Laby& laby) {
  *	@brief Test d'existence d'une case
  *	@param [in] crd Coordonnées d'une case
  *	@param [in] laby Le labyrinthe
- *	@return false ou true selon l'existence ou non de la case
+ *	@return True si la case existe, false sinon
  */
 bool est_case(const Vec3& crd, const Laby& laby) {
 	bool z_valide = crd.z < Laby::NBFACE;
@@ -119,7 +119,7 @@ bool est_case(const Vec3& crd, const Laby& laby) {
 /**
  *	@brief Translation vectorielle selon les contraintes d'un ruban de Moebius (inversions en Y aux bordures etc...)
  *	@param [in] depart Coordonnées de départ
- *	@param [] translation Translation à réaliser
+ *	@param [in] Translation à réaliser
  *	@param [in] laby Le labyrinthe
  *	@return nouv Le nouveau vecteur issu de la translation
  *	@pre Le nombre de lignes d'une face est supérieur à nouv.y
@@ -151,29 +151,6 @@ Vec3 translation_moebius(const Vec3& depart, const Vec3& translation, const Laby
 	}
 
 	assert(face.nbL > nouv.y);
-
-	return nouv;
-}
-
-/**
- *	@brief Rapporte les coordonnées à un labyrinthe d'une seule face
- *	@param [in] crd La coordonnée d'entrée
- *	@param [in] laby Le labyrinthe
- *	@return Nouvelle coordonnée
- */
-Vec3 crd_face_unique(const Vec3& crd, const Laby& laby) {
-	assert(crd.z < Laby::NBFACE);
-	Tab2 face = laby.faces[crd.z];
-	assert(face.nbL > crd.y);
-	Vec3 nouv;
-	nouv.x = crd.x;
-	nouv.y = crd.y;
-	nouv.z = 0;
-
-	for (int i = 0; i < crd.z; ++i) {
-		face = laby.faces[i];
-		nouv.x += face.nbC;
-	}
 
 	return nouv;
 }

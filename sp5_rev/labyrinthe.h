@@ -32,7 +32,7 @@ void initialiser(char* path, Laby& laby);
 /**
  *	@brief Affiche un labyrinthe
  *	@param [in] laby Labyrinthe à afficher
- *	@param mecontent Affiche le mécontentement du dragon si true (false si non renseigné)
+ *	@param [in] mecontent Affiche le mécontentement du dragon si true (false par défaut)
  */
 void afficher(const Laby& laby, bool mecontent = false);
 
@@ -62,27 +62,19 @@ Case read_case(const Vec3& crd, const Laby& laby);
  *	@brief Test d'existence d'une case
  *	@param [in] crd Coordonnées d'une case
  *	@param [in] laby Le labyrinthe
- *	@return false ou true selon l'existence ou non de la case
+ *	@return True si la case existe, false sinon
  */
 bool est_case(const Vec3& crd, const Laby& laby);
 
 /**
  *	@brief Translation vectorielle selon les contraintes d'un ruban de Moebius (inversions en Y aux bordures etc...)
  *	@param [in] depart Loordonnées de départ
- *	@param [] translation Translation à réaliser
+ *	@param [in] translation Translation à réaliser
  *	@param [in] laby Le labyrinthe
  *	@return nouv Le nouveau vecteur issu de la translation
  *	@pre Le nombre de lignes d'une face est supérieur à nouv.y
  */
 Vec3 translation_moebius(const Vec3& v1, const Vec3& v2, const Laby& laby);
-
- /**
- *	@brief Rapporte les coordonnées à un labyrinthe d'une seule face
- *	@param [in] crd La coordonnée d'entrée
- *	@param [in] laby Le labyrinthe
- *	@return Nouvelle coordonnée
- */
-Vec3 crd_face_unique(const Vec3& crd, const Laby& laby);
 
 /**
  *	@brief Vérifie si une case est à visiter ou non

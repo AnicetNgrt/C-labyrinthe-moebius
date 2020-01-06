@@ -12,6 +12,7 @@
 /**
  *	@brief Renvoie vrai ssi le type de case d'entrée est valide.
  *	@param [in] tc Type de case à vérifier
+ *	@retun True si la case est valide, false sinon
  */
 bool est_valide(const typeCase tc) {
 	return tc == MUR || tc == CHEMIN || tc == DRAGON || tc == PLAN;
