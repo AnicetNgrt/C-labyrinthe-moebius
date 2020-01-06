@@ -45,11 +45,3 @@ void afficher(const Vec3& v);
  *	@return true si toutes les coordonnées sont égales, false sinon
  */
 bool egal(const Vec3& v1, const Vec3& v2);
-
-/**
- *	@brief Inversion des ordonnées d'un Vecteur 3 par rapport au y_max
- *	@param [in] v Vecteur 3D
- *	@param [in] max_y Valeur maximale d'ordonnée
- *	@return Vecteur avec coordonnée y inversée
- */
-Vec3 inv_y(const Vec3& v, const int max_y);

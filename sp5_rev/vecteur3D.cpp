@@ -54,17 +54,3 @@ bool egal(const Vec3& v1, const Vec3& v2) {
 	bool z_egal = v1.z == v2.z;
 	return x_egal && y_egal && z_egal;
 }
-
-/**
- *	@brief Inversion des ordonnées d'un Vecteur 3 par rapport au y_max
- *	@param [in] v Vecteur 3D
- *	@param [in] max_y Valeur maximale d'ordonnée
- *	@return Vecteur avec coordonnée y inversée
- */
-Vec3 inv_y(const Vec3& v, const int max_y) {
-	Vec3 retour;
-	retour.x = v.x;
-	retour.y = max_y - v.y;
-	retour.z = v.z;
-	return retour;
-}

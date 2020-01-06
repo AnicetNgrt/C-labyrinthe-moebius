@@ -102,7 +102,7 @@ void afficher(const Tab2& t) {
 
 /**
  *	@brief Désalloue et rend NULL un tableau 2D
- *	@param [in-out] t Tableau 2D à désallouer
+ *	@param [in,out] t Tableau 2D à désallouer
  */
 void detruire(Tab2& t) {
 	for (int l = 0; l < t.nbL; l++) {

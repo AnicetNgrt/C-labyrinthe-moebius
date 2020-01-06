@@ -35,7 +35,8 @@ void MissionDragon() {
 	Laby laby;
 	Pile suivantes;
 	Pile chemin;
-	char path[] = "inMedium.txt";
+	// lecture d'un fichier in.txt à placer dans le dossier du projet
+	char path[] = "in.txt";
 	bool plan_found = false;
 	unsigned int k = 0;
 	Vec3 courant = tuple(0, 0, 0);
@@ -90,6 +91,7 @@ void MissionDragon() {
 		std::cout << "C";
 		afficher(laby.crd_dragon);
 		std::cout << "->";
+		std::cout << "\n";
 	}
 	else {
 		afficher(laby, true);
