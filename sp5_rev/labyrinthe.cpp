@@ -150,7 +150,7 @@ Vec3 translation_moebius(const Vec3& depart, const Vec3& translation, const Laby
 		face = laby.faces[nouv.z];	
 	}
 
-	assert(face.nbL > nouv.y);
+	assert(face.nbL >= nouv.y);
 
 	return nouv;
 }
