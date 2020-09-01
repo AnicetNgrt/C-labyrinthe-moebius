@@ -1,2 +1,3 @@
 # labyrinthe-moebius
 A C project for the Uni.
+Actually it is CPP, but we did not use any CPP exclusive feature except std::cout ...
